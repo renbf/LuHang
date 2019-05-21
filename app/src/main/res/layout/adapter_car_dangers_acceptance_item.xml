@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="15dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="15dp">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll_team_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_hot" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_do_change_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_do_change_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll_rectification_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_team_name"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_hot"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_dochange_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_team_name"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_rectification_name"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_hot"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="截止日期："
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/ll_data"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_window"/>
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:src="@mipmap/ic_triangle"/>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="app_main_text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">@dimen/dp_2</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/selector_color_dark_blue</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+    
+    <string-array name="log_drive_start_conclusion">
+        <item>良好 可以行驶</item>
+        <item>需修复 检验合格后行驶</item>
+        <item>不合格 禁止出车</item>
+    </string-array>
+    
+</resources>

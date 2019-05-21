@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏颜色-->
+        <item name="colorPrimary">@color/color_main</item>
+        <!--Appbar背景色-->
+        <item name="colorPrimaryDark">@color/color_main</item>
+        <!--控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/color_text_dark</item>
+        <!--页面背景色-->
+        <item name="android:windowBackground">@color/color_window</item>
+        <!--文字的颜色-->
+        <item name="android:textColor">@color/color_text_dark</item>
+        <!--提示文字颜色-->
+        <item name="android:textColorHint">@color/color_text_light</item>
+    </style>
+
+    <!--闪屏页-->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/color_main</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--通用dialog样式-->
+    <style name="styles_dialog" parent="@android:style/Theme.Dialog">
+        <!--去掉边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--悬浮-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--不需要标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--允许模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--全屏幕-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--通用dialog样式-->
+    <style name="styles_dialog_loader" parent="@style/styles_dialog"> 
+        <!--允许模糊-->
+        <item name="android:backgroundDimEnabled">false</item> 
+    </style>
+
+    <!--底部弹起的dialog-->
+    <style name="Up_Down_dialog_Animation" parent="@style/styles_dialog">
+        <item name="android:windowAnimationStyle">@style/anim_up_bottom</item>
+    </style>
+
+    <!--透明Activity-->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!--底部弹起动画-->
+    <style name="anim_up_bottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="padding_start_end">
+        <item name="android:paddingStart">@dimen/dp_15</item>
+        <item name="android:paddingEnd">@dimen/dp_15</item>
+    </style>
+
+    <style name="margin_start_end">
+        <item name="android:layout_marginStart">@dimen/dp_15</item>
+        <item name="android:layout_marginEnd">@dimen/dp_15</item>
+    </style>
+
+    <style name="TopBarTitle">
+        <item name="android:textSize">@dimen/top_bar_title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

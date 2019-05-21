@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_bar_com_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--受检部门-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="受检部门"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_selector_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--受检对象-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="受检对象"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_inspectObj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:background="@null"
+                    android:gravity="center_vertical|end" 
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--检查人-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="检查人"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_checkUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:background="@null"
+                    android:gravity="center_vertical|end" 
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--检查日期-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="检查日期"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_check_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--检查类型-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="检查类型"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_check_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--隐患名称-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="隐患名称"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_position_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:background="@null"
+                    android:gravity="center_vertical|end" 
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--隐患部位-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45" 
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@mipmap/ic_bi_tian"
+                    android:drawablePadding="5dp"
+                    android:text="隐患部位"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:background="@null"
+                    android:gravity="center_vertical|end" 
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--隐患部门-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="隐患部门"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_team"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--隐患类型-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="隐患类型"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+
+            <!--隐患等级-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="隐患等级"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+
+            <!--对应风险来源-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="对应风险来源"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_dangers_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--可能后果-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:text="可能后果"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end" 
+                    android:textSize="@dimen/sp_14" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--隐患照片-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="隐患照片"
+                    android:textSize="@dimen/sp_15"
+                    tools:ignore="HardcodedText" />
+
+                <com.gfc.library.widget.grid.ScrollGridView
+                    android:id="@+id/gv_danger_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:horizontalSpacing="@dimen/dp_15"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/dp_15">
+
+                </com.gfc.library.widget.grid.ScrollGridView>
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <View
+                style="@style/margin_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_window" />
+            <!--备注-->
+            <android.support.v7.widget.LinearLayoutCompat
+                style="@style/padding_start_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="备注"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/dp_3"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText" />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

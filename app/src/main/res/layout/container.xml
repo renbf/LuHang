@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.dalaiye.luhang.widget.captcha.PictureVertifyView
+        android:id="@+id/vertifyView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY" />
+
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:progressDrawable="@drawable/drag_seek_progress"
+            android:splitTrack="false"
+            android:thumbOffset="0dp"
+            android:thumb="@mipmap/icon_progress" />
+
+        <TextView
+            android:id="@+id/drag_tv_tips2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请将滑块拖动到指点位置"
+            android:textColor="@color/color_window"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+</LinearLayout>

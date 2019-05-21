@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_bar_com_layout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="35dp"
+        android:paddingBottom="35dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_upload_photo"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/img_auth_upload" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/lib_shape_rect"
+        android:enabled="false"
+        android:gravity="center"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
+        android:text="立即认证"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>

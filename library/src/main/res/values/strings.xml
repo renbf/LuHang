@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_def_int">0</string>
+    <string name="com_def_double">0.00</string>
+</resources>

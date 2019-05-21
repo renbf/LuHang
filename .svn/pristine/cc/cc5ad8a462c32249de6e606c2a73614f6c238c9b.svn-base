@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gfc.library.widget.max.MaxHeightLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:mhv_HeightRatio="0.6">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_collection"
+            style="@style/padding_start_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/selector_question_collection"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_correct_num"
+            style="@style/padding_start_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@mipmap/ic_question_yes"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/sp_15" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_wrong_num"
+            style="@style/padding_start_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@mipmap/ic_question_no"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="#EF3333"
+            android:textSize="@dimen/sp_15" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_submit_num"
+            style="@style/padding_start_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@mipmap/ic_question_number"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_text_light"
+            android:textSize="@dimen/sp_15" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_7"
+            android:paddingEnd="@dimen/dp_7" />
+    </RelativeLayout>
+</com.gfc.library.widget.max.MaxHeightLayout>

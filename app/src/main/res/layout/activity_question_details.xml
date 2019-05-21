@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar_text_layout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/padding_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:textSize="@dimen/sp_16" />
+
+        <!--选项A-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/a_layout"
+            style="@style/margin_start_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_def_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_a"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_yes_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_yes"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_answer_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textSize="@dimen/sp_15" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!--选项B-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/b_layout"
+            style="@style/margin_start_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_def_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_b"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_yes_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_yes"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_answer_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textSize="@dimen/sp_15" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <!--选项C-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/c_layout"
+            style="@style/margin_start_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_def_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_c"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_yes_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_yes"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_answer_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textSize="@dimen/sp_15" />
+        </android.support.v7.widget.LinearLayoutCompat>
+        <!--选项D-->
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/d_layout"
+            style="@style/margin_start_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_def_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_d"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_answer_yes_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_answer_yes"
+                android:visibility="gone" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_answer_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textSize="@dimen/sp_15" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_question_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_15"
+            android:gravity="bottom"
+            android:textSize="@dimen/sp_13" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>

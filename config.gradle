@@ -1,0 +1,68 @@
+ext {
+    configVersion = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.0",
+            minSdkVersion    : 19,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+    depVersion = [
+            supportVersion: "28.0.0",
+            glideVersion  : "4.7.1",
+    ]
+    dependencies = [
+            //support
+            "appcompat-v7"   : "com.android.support:appcompat-v7:${depVersion["supportVersion"]}",
+            "design"         : "com.android.support:design:${depVersion["supportVersion"]}",
+            "support-v4"     : "com.android.support:support-v4:${depVersion["supportVersion"]}",
+            "cardview-v7"    : "com.android.support:cardview-v7:${depVersion["supportVersion"]}",
+            "annotations"    : "com.android.support:support-annotations:${depVersion["supportVersion"]}",
+            "recyclerview-v7": "com.android.support:recyclerview-v7:${depVersion["supportVersion"]}",
+            "constraint"     : "com.android.support.constraint:constraint-layout:1.1.3",
+            "multidex"       : "com.android.support:multidex:1.0.2",
+
+            //时间
+            "eventbus"       : "org.greenrobot:eventbus:3.1.1",
+
+            //解析数据
+            "fastjson"       : "com.alibaba:fastjson:1.1.68.android",
+
+            //权限
+            "permission"     : "com.github.tbruyelle:rxpermissions:0.10.2",
+
+            //view
+            "glide"          : "com.github.bumptech.glide:glide:${depVersion["glideVersion"]}",
+            "glide-compiler" : "com.github.bumptech.glide:compiler:${depVersion["glideVersion"]}",
+            "glide-okhttp3"  : "com.github.bumptech.glide:okhttp3-integration:${depVersion["glideVersion"]}",
+            "picture"        : "com.github.LuckSiege.PictureSelector:picture_library:v2.2.3",//音视频选择
+            "divider"        : "com.yanyusong.y_divideritemdecoration:y_divideritemdecoration:2.0",
+            "flowlayout"     : "com.hyman:flowlayout-lib:1.1.2",
+            "pickerView"     : "com.contrarywind:Android-PickerView:4.1.7",
+            //网络
+            "okhttp3"        : "com.squareup.okhttp3:okhttp:3.11.0",
+            "okgo"           : "com.lzy.net:okgo:3.0.4",
+            "okserver"       : "com.lzy.net:okserver:2.0.5",
+
+            //View
+            "recycler"       : "rouchuan.viewpagerlayoutmanager:viewpagerlayoutmanager:2.0.22",
+            "brvah"          : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40",//RecyclerView的adapter
+            "avloading"      : "com.wang.avi:library:2.1.3",//loading
+
+            //刷新
+            "refresh"        : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14",
+
+            //适配
+            "autosize"       : "me.jessyan:autosize:1.0.0",
+
+            //Utils
+            "utils"          : "com.blankj:utilcode:1.18.1",
+            //视频播放
+            "NiceVieoPlayer" : "com.github.xiaoyanger0825:NiceVieoPlayer:v2.2",
+
+            //推送
+            "push"           : "com.getui:sdk:2.13.2.0"
+
+
+    ]
+}

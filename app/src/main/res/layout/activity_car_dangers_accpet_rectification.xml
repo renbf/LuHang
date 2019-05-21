@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_bar_com_layout" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/padding_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_bi_tian"
+            android:drawablePadding="5dp"
+            android:text="整改措施"
+            android:textSize="@dimen/sp_15"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_do_change_step"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_15"
+            android:maxLength="20"
+            android:background="@null"
+            android:gravity="center_vertical|end"
+            android:hint="请输入内容"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/margin_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_window" />
+
+    <!--受检对象-->
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/padding_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_bi_tian"
+            android:drawablePadding="5dp"
+            android:text="整改资金"
+            android:textSize="@dimen/sp_15"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_do_change_capital"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_15"
+            android:maxLength="20"
+            android:background="@null"
+            android:inputType="number"
+            android:gravity="center_vertical|end"
+            android:digits="1234567890."
+            android:hint="请输入内容"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        style="@style/margin_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_window" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        style="@style/padding_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="整改照片"
+            android:textSize="@dimen/sp_15"
+            tools:ignore="HardcodedText" />
+
+        <com.gfc.library.widget.grid.ScrollGridView
+            android:id="@+id/gv_danger_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:horizontalSpacing="@dimen/dp_15"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/dp_15">
+
+        </com.gfc.library.widget.grid.ScrollGridView>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_blue"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+</android.support.v7.widget.LinearLayoutCompat>

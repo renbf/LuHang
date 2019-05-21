@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+def configVersion = rootProject.ext.configVersion
+def dep = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion configVersion.compileSdkVersion
+    defaultConfig {
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+        minSdkVersion configVersion.minSdkVersion
+        targetSdkVersion configVersion.targetSdkVersion
+        versionCode configVersion.versionCode
+        versionName configVersion.versionName
+        //65535
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    //support
+    api dep["appcompat-v7"]
+    api dep["design"]
+    api dep["support-v4"]
+    api dep["cardview-v7"]
+    api dep["annotations"]
+    api dep["recyclerview-v7"]
+    api dep["constraint"]
+    api dep["multidex"]
+    //事件
+    api dep["eventbus"]
+    //数据解析
+    api dep["fastjson"]
+    //图片
+    api dep["glide"]
+    annotationProcessor dep["glide-compiler"]
+    api dep["glide-okhttp3"]
+    api dep["picture"]
+    api dep["divider"]
+    api dep["flowlayout"]
+    api dep["pickerView"]
+    //权限
+    api dep["permission"]
+    //OkGo
+    api dep["okhttp3"]
+    api dep["okgo"]
+    api dep["okserver"]
+    //View
+    api dep["recycler"] 
+    api dep["brvah"]
+    api dep["avloading"]
+    //适配
+    api dep["autosize"]
+    //下拉刷新
+    api dep["refresh"]
+    //Utils
+    api dep["utils"]
+    //视频播放
+    api dep["NiceVieoPlayer"]
+    //推送
+    api dep["push"]
+    
+
+}

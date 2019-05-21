@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_window"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/status_bar_height">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_search"
+            style="@style/padding_start_end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/shape_home_search"
+            android:drawableStart="@mipmap/ic_search_small"
+            android:drawablePadding="@dimen/dp_8"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:text="请输入关键字进行搜索"
+            android:textColor="@color/color_text_light"
+            android:textSize="@dimen/sp_13" />
+
+        <android.support.v7.widget.ContentFrameLayout
+            android:id="@+id/msg_layout"
+            style="@style/padding_start_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:src="@mipmap/ic_message_black" />
+
+            <View
+                android:id="@+id/view_msg"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_7"
+                android:layout_gravity="end"
+                android:background="@drawable/shape_home_msg"
+                android:visibility="gone" />
+        </android.support.v7.widget.ContentFrameLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <com.leochuan.AutoPlayRecyclerView
+                    android:id="@+id/auto_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    app:direction="right"
+                    app:timeInterval="3000" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/padding_start_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="公告"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:background="@color/color_window" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_home_bulletin"
+                        android:paddingStart="@dimen/dp_8"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingEnd="@dimen/dp_8"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:text="推荐"
+                        android:textColor="@color/color_blue"
+                        android:textSize="@dimen/sp_10" />
+
+                    <com.gfc.library.widget.text.ScrollTextView
+                        android:id="@+id/tv_bulletin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        app:mvSingleLine="true"
+                        app:mvTextColor="@color/color_text_dark"
+                        app:mvTextSize="@dimen/sp_13" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@color/color_window" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_20">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_home_tips"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="小知识"
+                        android:textSize="@dimen/sp_13" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_train"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_home_train"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="培训"
+                        android:textSize="@dimen/sp_13" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_home_check"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="检查"
+                        android:textSize="@dimen/sp_13" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/ic_home_log"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:gravity="center"
+                        android:text="日志"
+                        android:textSize="@dimen/sp_13" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@color/color_window" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    style="@style/padding_start_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8">
+
+                    <View
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/dp_20"
+                        android:background="@color/color_blue" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_weight="1"
+                        android:text="行业动态"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="更多>>"
+                        android:textColor="@color/color_text_light"
+                        android:textSize="@dimen/sp_12" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/industry_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <include
+            layout="@layout/lib_loading_layout"
+            android:visibility="gone" />
+
+    </android.support.v7.widget.ContentFrameLayout>
+</android.support.v7.widget.LinearLayoutCompat>

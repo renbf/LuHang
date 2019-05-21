@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+def configVersion = rootProject.ext.configVersion
+
+android {
+    compileSdkVersion configVersion.compileSdkVersion
+    defaultConfig {
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "MEHOktmxWV91Wm5qJrgW13",
+                GETUI_APP_KEY   : "lWxpjzhEXZAMItZkSiGNJ",
+                GETUI_APP_SECRET: "JQKWac81Ll89d8QRwM5KK5"
+        ]
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
+        applicationId "com.dalaiye.luhang"
+        minSdkVersion configVersion.minSdkVersion
+        targetSdkVersion configVersion.targetSdkVersion
+        versionCode configVersion.versionCode
+        versionName configVersion.versionName
+        //65535
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+
+dependencies {
+    implementation project(':library')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
